@@ -12,7 +12,7 @@ interface Props {
 
 interface PostData {
   title: string;
-  date: string;
+  data: string;
   spoiler: string;
 }
 
@@ -40,7 +40,7 @@ export const getStaticProps: GetStaticProps = async ({ params: { title } }) => {
   const { content, data } = getPostAll().find((m) => m.data.title === title);
   const source = await renderToString(content);
   return {
-    props: { source, data },
+    props: { content, data },
   };
 };
 
@@ -57,7 +57,6 @@ function getPostAll() {
         .map((fileName) => fs.readFileSync(path.join(dirPath, fileName)));
     })
     .map((f) => {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { orig, ...post } = matter(f);
       return post;
     });

@@ -4,9 +4,6 @@ date: "2019-03-09"
 spoiler: エフェクトはデータフローの一部
 ---
 
-This article was originally posted [here](https://raw.githubusercontent.com/gaearon/overreacted.io/master/src/pages/a-complete-guide-to-useeffect/index.ja.md).
-Thanks, Dan for open sourcing the article.
-
 あなたは Hooks を使って複数のコンポーネントを書きました。ちょっとしたアプリも作ったことがあるでしょう。満足もしている。API にも慣れて、その過程でコツも掴んできました。しかも重複したロジックを転用できるよう Custom Hooks を作り、同僚に自慢して見たり。
 
 でも useEffect を使う度、いまいちピンときません。class のライフサイクルとは似ているけど、何かが違う。そしていろんな疑問を抱き始めます。
